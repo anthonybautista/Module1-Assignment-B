@@ -1,0 +1,6 @@
+C:\Users\Anthony\RiderProjects\Module1-Assignment-B\Module1-Assignment-B\bin\Debug\Module1_Assignment_B.exe
+C:\Users\Anthony\RiderProjects\Module1-Assignment-B\Module1-Assignment-B\bin\Debug\Module1_Assignment_B.pdb
+C:\Users\Anthony\RiderProjects\Module1-Assignment-B\Module1-Assignment-B\obj\Debug\Module1-Assignment-B.csproj.AssemblyReference.cache
+C:\Users\Anthony\RiderProjects\Module1-Assignment-B\Module1-Assignment-B\obj\Debug\Module1-Assignment-B.csproj.CoreCompileInputs.cache
+C:\Users\Anthony\RiderProjects\Module1-Assignment-B\Module1-Assignment-B\obj\Debug\Module1_Assignment_B.exe
+C:\Users\Anthony\RiderProjects\Module1-Assignment-B\Module1-Assignment-B\obj\Debug\Module1_Assignment_B.pdb
