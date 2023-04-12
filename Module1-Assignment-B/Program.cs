@@ -20,31 +20,48 @@ namespace Module1_Assignment_B
 
             while (addMore)
             {
-                AnimalBuilder animal = new AnimalBuilder();
-                if (animal != null)
+                try
                 {
-                    zoo.Add(animal.GetAnimal());
+                    AnimalBuilder animal = new AnimalBuilder();
+                    if (animal != null)
+                    {
+                        zoo.Add(animal.GetAnimal());
+                    }
+
+                    Console.WriteLine("Add another animal? 1: Yes, 2: No");
+                    int selection = Int32.Parse(Console.ReadLine());
+
+                    switch (selection)
+                    {
+                        case 1:
+                            addMore = true;
+                            break;
+                        case 2:
+                            addMore = false;
+                            break;
+                        default:
+                            throw new Exception("Invalid selection: " + selection);
+                    }
                 }
-                
-                Console.WriteLine("Add another animal? 1: Yes, 2: No");
-                int selection = Int32.Parse(Console.ReadLine());
-                
-                switch (selection)
+                catch (Exception e)
                 {
-                    case 1:
-                        addMore = true;
-                        break;
-                    case 2:
-                        addMore = false;
-                        break;
-                    default:
-                        throw new Exception("Invalid selection: " + selection);
+                    Console.WriteLine("Invalid selection: " + e.Message);
+                    Console.WriteLine("Continuing program execution...");
+                    addMore = false;
                 }
             }
 
-            foreach (ITalkable thing in zoo)
+            try
             {
-                PrintOut(thing);
+                foreach (ITalkable thing in zoo)
+                {
+                    PrintOut(thing);
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("Error: Zoo failed to build.");
+                Console.WriteLine("Continuing program execution...");
             }
             
             _fileOutput.FileClose();
